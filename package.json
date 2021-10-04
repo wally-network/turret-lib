@@ -1,0 +1,94 @@
+{
+  "name": "turret-controller",
+  "description": "Wrangler implementation",
+  "version": "0.0.0",
+  "author": "Julian <julian@hacksur.com> (http://hacksur.com)",
+  "bugs": {
+    "url": "https://github.com/hacksur/turret-controller/issues",
+    "email": "julian@hacksur.com"
+  },
+  "contributors": [
+    "Julian <julian@hacksur.com> (http://hacksur.com)"
+  ],
+  "devDependencies": {
+    "@cloudflare/workers-types": "^2.2.2",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@iarna/toml": "^2.2.5",
+    "@types/bluebird": "^3.5.36",
+    "@types/jest": "^26.0.23",
+    "@types/lodash": "^4.14.175",
+    "@types/node": "^16.10.2",
+    "@types/service-worker-mock": "^2.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.16.1",
+    "@typescript-eslint/parser": "^4.16.1",
+    "ava": "latest",
+    "babel-eslint": "^10.1.0",
+    "bignumber.js": "^4.1.0",
+    "bluebird": "^3.7.2",
+    "buffer": "^5.7.1",
+    "cfw-easy-utils": "^1.0.2",
+    "codecov": "latest",
+    "copy-webpack-plugin": "^9.0.1",
+    "cross-env": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-config-typescript": "^3.0.0",
+    "eslint-config-xo-lass": "latest",
+    "fixpack": "latest",
+    "git-revision-webpack-plugin": "^5.0.0",
+    "husky": "latest",
+    "lint-staged": "latest",
+    "lodash": "^4.17.21",
+    "moment": "^2.29.1",
+    "nyc": "latest",
+    "prettier": "^2.3.0",
+    "remark-cli": "latest",
+    "remark-preset-github": "latest",
+    "service-worker-mock": "^2.0.5",
+    "sha.js": "^2.4.11",
+    "stellar-base": "^6.0.3",
+    "terser-webpack-plugin": "^5.2.4",
+    "tiny-request-router": "^1.2.2",
+    "ts-loader": "^9.2.2",
+    "typescript": "^4.3.2",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.0",
+    "xo": "latest"
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "homepage": "https://github.com/hacksur/turret-controller",
+  "keywords": [
+    "lass",
+    "turret-controller"
+  ],
+  "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hacksur/turret-controller"
+  },
+  "scripts": {
+    "build": "webpack",
+    "deploy": "wrangler publish",
+    "dev": "wrangler dev",
+    "clear": "rm -R ./dist",
+    "format": "prettier --write  '*.{json,js}' 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+    "init": "export $(cat .env|tr -d \"[:blank:]\"|xargs) && envsubst < wrangler.toml.dist > wrangler.toml",
+    "preinit": "[ \"${CI}\" = true ] && npx envdist -e || npx envdist",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
+    "lint": "xo"
+  },
+  "xo": {
+    "prettier": true,
+    "space": true,
+    "extends": [
+      "xo-lass"
+    ]
+  },
+  "dependencies": {
+    "@types/bignumber.js": "^5.0.0"
+  }
+}
