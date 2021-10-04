@@ -2,9 +2,9 @@
   "name": "turret-controller",
   "description": "Wrangler implementation",
   "version": "0.0.0",
-  "author": "Julian <julian@hacksur.com> (http://hacksur.com)",
+  "author": "Julian <julian@hacksur.com> (http://wally.network)",
   "bugs": {
-    "url": "https://github.com/hacksur/turret-controller/issues",
+    "url": "https://github.com/wally-network/turret-controller/issues",
     "email": "julian@hacksur.com"
   },
   "contributors": [
@@ -54,12 +54,13 @@
     "typescript": "^4.3.2",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
-    "xo": "latest"
+    "xo": "latest",
+    "@types/bignumber.js": "^5.0.0"
   },
   "engines": {
     "node": ">= 10"
   },
-  "homepage": "https://github.com/hacksur/turret-controller",
+  "homepage": "https://github.com/wally-network/turret-controller",
   "keywords": [
     "lass",
     "turret-controller"
@@ -68,7 +69,7 @@
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hacksur/turret-controller"
+    "url": "https://github.com/wally-network/turret-controller"
   },
   "scripts": {
     "build": "webpack",
@@ -87,8 +88,5 @@
     "extends": [
       "xo-lass"
     ]
-  },
-  "dependencies": {
-    "@types/bignumber.js": "^5.0.0"
   }
 }
