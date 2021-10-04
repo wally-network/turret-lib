@@ -1,10 +1,10 @@
 {
-  "name": "turret-controller",
+  "name": "turret-lib",
   "description": "Wrangler implementation",
   "version": "0.0.0",
   "author": "Julian <julian@hacksur.com> (http://wally.network)",
   "bugs": {
-    "url": "https://github.com/wally-network/turret-controller/issues",
+    "url": "https://github.com/wally-network/turret-lib/issues",
     "email": "julian@hacksur.com"
   },
   "contributors": [
@@ -15,6 +15,7 @@
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
     "@iarna/toml": "^2.2.5",
+    "@types/bignumber.js": "^5.0.0",
     "@types/bluebird": "^3.5.36",
     "@types/jest": "^26.0.23",
     "@types/lodash": "^4.14.175",
@@ -54,22 +55,21 @@
     "typescript": "^4.3.2",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.0",
-    "xo": "latest",
-    "@types/bignumber.js": "^5.0.0"
+    "xo": "latest"
   },
   "engines": {
     "node": ">= 10"
   },
-  "homepage": "https://github.com/wally-network/turret-controller",
+  "homepage": "https://github.com/wally-network/turret-lib",
   "keywords": [
     "lass",
-    "turret-controller"
+    "turret-lib"
   ],
   "license": "MIT",
   "main": "dist/index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wally-network/turret-controller"
+    "url": "https://github.com/wally-network/turret-lib"
   },
   "scripts": {
     "build": "webpack",
